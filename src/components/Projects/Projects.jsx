@@ -12,16 +12,16 @@ const Projects = () => {
       name: 'Civic Connect',
       description: 'A comprehensive civic issue reporting platform that enables citizens to report and track community issues. Features include real-time status updates, location-based reporting, and administrative dashboards.',
       technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT Auth'],
-      github: 'https://github.com/mohanrao49/Civic-Connect',
-      demo: '#',
+      github: 'https://github.com/mohanrao49/issue-reporting',
+      demo: 'https://issue-reporting-pi.vercel.app',
       featured: true
     },
     {
       name: 'Skill Bartering Platform',
       description: 'A full-stack web application that connects users to exchange skills and services. Features user authentication, skill matching algorithm, messaging system, and rating mechanism.',
       technologies: ['React.js', 'Node.js', 'Express.js', 'SQL', 'JavaScript', 'HTML', 'CSS'],
-      github: 'https://github.com/mohanrao49',
-      demo: '#',
+      github: 'https://github.com/mohanrao49/Skill_Bartering',
+      demo: 'https://skillbarteringswap.netlify.app',
       featured: true
     }
   ];
