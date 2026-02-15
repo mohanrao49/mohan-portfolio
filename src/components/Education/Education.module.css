@@ -1,0 +1,180 @@
+/* ========================================
+   EDUCATION SECTION STYLES
+   ======================================== */
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+
+.timelineMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.markerIcon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-mid));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+  z-index: 1;
+}
+
+.timelineLine {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(180deg, var(--color-gradient-start), transparent);
+  margin-top: 16px;
+  min-height: 60px;
+}
+
+.timelineContent {
+  flex: 1;
+  padding-bottom: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover {
+  transform: translateX(8px);
+  box-shadow: 0 16px 40px rgba(102, 126, 234, 0.15);
+}
+
+.cardHeader {
+  margin-bottom: 16px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+}
+
+.badge.degree {
+  background: rgba(102, 126, 234, 0.1);
+  color: var(--color-gradient-start);
+}
+
+.badge.certification {
+  background: rgba(52, 199, 89, 0.1);
+  color: #34c759;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.institution {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-secondary);
+  margin-bottom: 16px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+.grade {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  color: var(--color-gradient-start);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timelineItem {
+    gap: 16px;
+  }
+
+  .markerIcon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .institution {
+    font-size: 14px;
+  }
+
+  .meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timelineItem {
+    gap: 12px;
+  }
+
+  .markerIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+}

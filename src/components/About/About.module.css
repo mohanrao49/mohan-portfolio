@@ -1,0 +1,128 @@
+/* ========================================
+   ABOUT SECTION STYLES
+   ======================================== */
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lead {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--color-primary);
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-secondary);
+}
+
+.description strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Highlights Grid */
+.highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.highlightCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 28px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.highlightCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.2);
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gradient-start);
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.highlightCard:hover .iconWrapper {
+  background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-mid));
+  color: white;
+  transform: scale(1.05);
+}
+
+.highlightTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.highlightDescription {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-secondary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .highlights {
+    order: -1;
+  }
+
+  .lead {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .highlightCard {
+    padding: 24px;
+  }
+
+  .lead {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+}

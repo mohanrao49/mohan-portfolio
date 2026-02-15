@@ -1,0 +1,276 @@
+/* ========================================
+   CONTACT SECTION STYLES
+   ======================================== */
+
+.contactWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 64px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Contact Info */
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infoTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.infoDescription {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-secondary);
+  margin-bottom: 32px;
+}
+
+.contactMethods {
+  margin-bottom: 32px;
+}
+
+.contactMethod {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.contactMethod:hover {
+  transform: translateX(8px);
+  box-shadow: 0 12px 32px rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.2);
+}
+
+.methodIcon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-mid));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.methodDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.methodLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.methodValue {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  background: rgba(52, 199, 89, 0.1);
+  border-radius: 12px;
+}
+
+.availabilityDot {
+  width: 8px;
+  height: 8px;
+  background: #34c759;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(52, 199, 89, 0);
+  }
+}
+
+.availabilityText {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2d8a47;
+}
+
+/* Form Container */
+.formContainer {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.input,
+.textarea {
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 15px;
+  color: var(--color-primary);
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-secondary);
+  opacity: 0.6;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-gradient-start);
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 16px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success Message */
+.successMessage {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.successIcon {
+  color: #34c759;
+  margin-bottom: 20px;
+}
+
+.successMessage h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.successMessage p {
+  font-size: 16px;
+  color: var(--color-secondary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contactWrapper {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contactInfo {
+    text-align: center;
+  }
+
+  .contactMethods {
+    max-width: 400px;
+    margin: 0 auto 32px;
+  }
+
+  .availability {
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .formContainer {
+    padding: 28px 24px;
+  }
+
+  .infoTitle {
+    font-size: 24px;
+  }
+
+  .contactMethod {
+    padding: 16px;
+  }
+
+  .methodIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .methodValue {
+    font-size: 13px;
+  }
+}
