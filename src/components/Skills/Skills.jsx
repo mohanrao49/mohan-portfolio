@@ -9,7 +9,7 @@ const Skills = () => {
     },
     {
       title: 'Frontend',
-      skills: ['React.js', 'HTML', 'CSS', 'Bootstrap']
+      skills: ['React.js', 'HTML5', 'CSS3', 'Bootstrap']
     },
     {
       title: 'Backend',
@@ -17,11 +17,11 @@ const Skills = () => {
     },
     {
       title: 'Database',
-      skills: ['MongoDB', 'SQL', 'SQLite']
+      skills: ['MongoDB', 'SQL']
     },
     {
       title: 'Tools',
-      skills: ['Git', 'GitHub', 'Postman', 'VS Code', 'JWT Authentication']
+      skills: ['Git', 'GitHub', 'Vercel', 'Render', 'Netlify', 'VS Code', 'JWT Authentication']
     }
   ];
 
