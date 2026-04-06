@@ -122,7 +122,7 @@ const Hero = () => {
           >
             <span className={styles.techLabel}>Tech Stack</span>
             <div className={styles.techItems}>
-              {['React.js', 'Node.js', 'MongoDB', 'Express.js'].map((tech, index) => (
+              {['React.js', 'Node.js', 'MongoDB', 'Express.js', 'SQL'].map((tech, index) => (
                 <span 
                   key={tech} 
                   className={styles.techItem}
